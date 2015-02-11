@@ -47,7 +47,7 @@ end
 
 module Napa
   class << self
-    def initialize
+    def init
       unless Napa.skip_initialization
         Napa::Logger.logger.info Napa::GemDependency.log_all if Napa.env.production?
         Napa::Deprecations.initialization_checks
@@ -56,4 +56,4 @@ module Napa
   end
 end
 
-Napa.initialize
+Napa.init
